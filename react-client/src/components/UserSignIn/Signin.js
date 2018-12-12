@@ -37,6 +37,8 @@ class Signin extends React.Component {
           alert(res.message)
           if (res.success){
               localStorage.setItem('token', res.token);
+              localStorage.setItem('email', obj.email)
+
             this.setState({
                 isLoggedIn: true
             })

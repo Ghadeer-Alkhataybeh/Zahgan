@@ -5,6 +5,7 @@ import Create from '../Creator/Create'
 import Slideshow from '../Slider/Slideshow';
 import Vision from '../about/Vision';
 
+
 class HomeClass extends React.Component {
 constructor(props){
     super(props)
@@ -24,6 +25,8 @@ scrollToMyRef = () => {
 }
 render(){
     console.log("HomeClass",this.props.items)
+    // console.log('Token ....2',jwtDecode(localStorage.getItem('token')))
+    // console.log('Token ....3',localStorage.getItem('name'))
     return(
        
   <div>

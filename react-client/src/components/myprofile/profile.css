@@ -1,0 +1,24 @@
+.imgprofile{
+    width: 200px;
+    
+}
+
+.cardprofile{
+    width:500px;
+    cursor: pointer;
+    margin-top: 100px;
+    margin-left: 150px;
+}
+
+.spanprofile{
+   margin-left: 2px;
+   font-size: 20px;
+}
+
+.maindiv{
+    display: inline-block
+}
+
+TextField{
+    font-size: 30px;
+}

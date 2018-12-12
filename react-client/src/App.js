@@ -3,7 +3,6 @@ import './App.css';
 import Nav from './components/Home/Nav'
 import {BrowserRouter ,Route ,Switch} from 'react-router-dom'
 import HomeClass from './components/Home/HomeClass'
-
 import Create from './components/Creator/Create'
 import $ from 'jquery';
 import Signup from './components/UserSignIn/Signup';
@@ -16,6 +15,7 @@ import Reserved from './components/Creator/Reserved';
 import Footer from './components/Footer';
 import location from './components/about/pages/location';
 import vision from './components/about/pages/vision';
+import Myprofile from './components/myprofile/myprofile';
 import ContactUs from './components/ContactUs/ContactUs';
 
 
@@ -37,6 +37,7 @@ class App extends Component {
       url: '/create',
       type: "GET",
       success: (data) => {
+        console.log(data)
        
         this.setState({
           items: data
@@ -65,6 +66,9 @@ class App extends Component {
       
       <Nav />
       
+     
+      
+      
       <Switch>
   <Route exact path='/' render={()=>{
     return (
@@ -72,20 +76,27 @@ class App extends Component {
       <HomeClass items={this.state.items} />
     )}}
   />
-
+  <Route  path='/homeClass' render={()=>{
+    return (
+      
+      <HomeClass items={this.state.items} />
+    )}}
+  />
+<Route path='/Myprofile' component={Myprofile} />  
 <Route path='/SignInCreator' component={SignInCreator} />
 <Route path='/Creator' component={Create} />
 <Route path='/signup' component={Signup} />
 <Route path='/signin' component={Signin} />
 <Route path='/location' component={location}/>
 <Route path='/vision' component={vision}/>
-
 <Route path='/Eventcreatshow' component={Eventcreatshow}/>
 <Route path='/Eventsets' component={Eventsets}/>
 <Route path='/Reserved' component={Reserved}/>
 <Route path='/ContactUs' component={ContactUs}/>
 
+
 </Switch>
+
 </div>
 
 </div>

@@ -42,6 +42,10 @@ const EventSchema = new Schema({
     attending: {
         type: Array
     },
+    approve: {
+        type: Number,
+        required: [true, 'Name Field is Required']
+    }
 });
 
 var Event = mongoose.model('Event', EventSchema);
