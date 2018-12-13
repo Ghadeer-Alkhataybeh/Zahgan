@@ -9,6 +9,7 @@ const User = require('./database-mongo/User');
 const UserSession = require('./database-mongo/UserSession');
 const Creator = require('./database-mongo/Creator');
 const CreatorSession = require('./database-mongo/CreatorSession');
+const ContactUs = require('./database-mongo/contactus');
 
 var app = express();
 app.use(bodyParser.json());
@@ -55,6 +56,9 @@ app.get('/create', function (req, res, next) {
 // feedback 
 app.post('/contactus', function (req, res, next) {
 console.log(9999)
+ContactUs.create(req.body.obj).then(function (data) {
+  res.send(data)
+}).catch(next)
  
 });
 

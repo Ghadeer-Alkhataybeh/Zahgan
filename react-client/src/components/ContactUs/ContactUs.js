@@ -21,7 +21,7 @@ handleChange = (event)=>{
 handleSubmit = (event)=>{
 
    var obj = {
-    userName: this.state.name,
+    name: this.state.name,
     email: this.state.email,
     feedback: this.state.feedback
   }
